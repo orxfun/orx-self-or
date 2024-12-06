@@ -1,0 +1,12 @@
+[package]
+name = "orx-self-or"
+version = "1.0.0"
+edition = "2021"
+authors = ["orxfun <orx.ugur.arikan@gmail.com>"]
+description = "Defines SoR (self-or-ref) and SoM (self-or-mut) traits that are useful in reducing code duplication and pushing forward the ownership transfer decision from the type designer to the consumer."
+license = "MIT"
+repository = "https://github.com/orxfun/orx-self-or/"
+keywords = ["self", "mut", "owned", "polymorphic", "pointer"]
+categories = ["data-structures", "rust-patterns", "no-std"]
+
+[dependencies]

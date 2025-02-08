@@ -1,6 +1,7 @@
 # orx-self-or
 
 [![orx-self-or crate](https://img.shields.io/crates/v/orx-self-or.svg)](https://crates.io/crates/orx-self-or)
+[![orx-self-or crate](https://img.shields.io/crates/d/orx-self-or.svg)](https://crates.io/crates/orx-self-or)
 [![orx-self-or documentation](https://docs.rs/orx-self-or/badge.svg)](https://docs.rs/orx-self-or)
 
 Defines SoR (self-or-ref) and SoM (self-or-mut) traits that are useful in reducing code duplication and pushing forward the ownership transfer decision from the type designer to the consumer.

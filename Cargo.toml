@@ -1,7 +1,7 @@
 [package]
 name = "orx-self-or"
-version = "1.1.1"
-edition = "2021"
+version = "1.2.0"
+edition = "2024"
 authors = ["orxfun <orx.ugur.arikan@gmail.com>"]
 description = "Defines SoR (self-or-ref) and SoM (self-or-mut) traits that are useful in reducing code duplication and pushing forward the ownership transfer decision from the type designer to the consumer."
 license = "MIT OR Apache-2.0"

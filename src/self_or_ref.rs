@@ -26,5 +26,5 @@ impl<T> SoR<T> for &T {
 }
 
 fn sth(a: usize) -> usize {
-    13
+    10
 }

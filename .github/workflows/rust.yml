@@ -49,7 +49,7 @@ jobs:
       run: cargo check --verbose --target wasm32v1-none
 
     - name: Clippy
-      run: cargo clippy --verbose
+      run: cargo clippy -- -D warnings --verbose
 
     - name: Miri
       run: cargo +nightly miri test --verbose

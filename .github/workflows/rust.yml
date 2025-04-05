@@ -16,6 +16,7 @@ jobs:
     strategy:
       matrix:
         toolchain: ["stable"]
+        target: ["", "--target i686-unknown-linux-musl"]
 
     steps:
     - uses: actions/checkout@v4
@@ -29,10 +30,8 @@ jobs:
       run: rustup target add i686-unknown-linux-musl
       
     - name: Build
-      run: cargo build --verbose
+      run: cargo build --verbose ${{ matrix.target }}
     - name: Run tests
-      run: cargo test --verbose
-    - name: Run tests 32bit
-      run: cargo test --target i686-unknown-linux-musl
+      run: cargo test --verbose ${{ matrix.target }}
     - name: Clippy
-      run: cargo clippy --verbose
+      run: cargo clippy --verbose ${{ matrix.target }}

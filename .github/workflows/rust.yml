@@ -28,10 +28,12 @@ jobs:
 
     - name: Install 32bit target
       run: rustup target add i686-unknown-linux-musl
+    - name: Install miri
+      run: rustup component add --toolchain nightly-x86_64-unknown-linux-gnu miri
       
     - name: Build
       run: cargo build --verbose ${{ matrix.target }}
-    - name: Run tests
+    - name: Test
       run: cargo test --verbose ${{ matrix.target }}
     - name: Clippy
       run: cargo clippy --verbose ${{ matrix.target }}

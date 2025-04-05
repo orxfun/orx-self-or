@@ -24,3 +24,7 @@ impl<T> SoR<T> for &T {
         self
     }
 }
+
+fn sth(a: usize) -> usize {
+    13
+}

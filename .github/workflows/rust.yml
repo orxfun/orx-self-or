@@ -27,8 +27,7 @@ jobs:
 
     - name: Install 32bit target
       run: rustup target add i686-unknown-linux-musl
-
-
+      
     - name: Build
       run: cargo build --verbose
     - name: Run tests

@@ -36,6 +36,12 @@ jobs:
       - name: Cargo test
         run: cargo test --verbose
 
+      - name: Cargo test release
+        run: cargo test --verbose --release
+
+      - name: Cargo clippy
+        run: cargo clippy --verbose
+
       - name: Cargo check w/o default features
         run: cargo check --verbose --no-default-features
 

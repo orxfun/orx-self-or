@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         toolchain: ["stable"]
-        target: ["", "--target i686-unknown-linux-musl"]
+        target: ["", "--target i686-unknown-linux-musl", "--target wasm32v1-none"]
 
     steps:
     - uses: actions/checkout@v4
@@ -30,6 +30,8 @@ jobs:
       run: rustup target add i686-unknown-linux-musl
     - name: Install miri
       run: rustup component add --toolchain nightly-x86_64-unknown-linux-gnu miri
+    - name: Install no-std-check
+      run: cargo install cargo-no-std-check
       
     - name: Build
       run: cargo build --verbose ${{ matrix.target }}
@@ -39,3 +41,5 @@ jobs:
       run: cargo clippy --verbose ${{ matrix.target }}
     - name: Miri
       run: cargo +nightly miri test --verbose ${{ matrix.target }}
+    - name: NoStd
+      run: cargo no-std-check
